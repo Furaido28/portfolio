@@ -1,18 +1,21 @@
 <div class="bg-white rounded-3xl
          shadow-[0_8px_30px_rgba(0,0,0,0.80)]
          border border-gray-200
-         w-[850px]
-         py-8 px-10
+         w-full max-w-[850px]
+         py-6 px-6
+         sm:py-8 sm:px-10
          transition-all duration-300
          hover:-translate-y-1
          hover:shadow-[0_12px_40px_rgba(0,0,0,0.9)]
          cursor-pointer"
      [ngClass]="{
-         'h-[250px]': card.header === 'À-propos',
-         'h-[220px]': card.header !== 'À-propos' && card.header !== 'Contact',
-         'h-[185px]': card.header === 'Contact'
-     }">
-
+         'min-h-[250px]': card.header === 'À-propos',
+         'min-h-[210px]': card.header === 'Compétences',
+         'min-h-[215px]': card.header === 'Project',
+         'min-h-[165px]': card.header === 'Contact'
+     }"
+     (click)="openCard(card)"
+>
   <div class="text-blue-600 font-semibold text-lg mb-1">
     {{ card.header }}
   </div>
@@ -28,7 +31,7 @@
   <div class="flex flex-wrap gap-3 mt-4">
     @for (chip of card.chips; track chip.textValue) {
       @if(card.header === "Contact") {
-        <!-- Cas EMAIL -->
+        <!-- EMAIL -->
         @if (chip.textValue === 'Email') {
           <a href="mailto:ethan.flipo@icloud.com"
              target="_blank"
@@ -40,7 +43,7 @@
           </a>
         }
 
-        <!-- Cas LINKEDIN -->
+        <!-- LINKEDIN -->
         @if (chip.textValue === 'LinkedIn') {
           <a href="https://www.linkedin.com/in/ethan-flipo"
              target="_blank"
@@ -52,7 +55,7 @@
           </a>
         }
 
-        <!-- Cas GITHUB -->
+        <!-- GITHUB -->
         @if (chip.textValue === 'GitHub') {
           <a href="https://github.com/Furaido28"
              target="_blank"
@@ -63,8 +66,7 @@
             {{ chip.textValue }}
           </a>
         }
-      } @else if (card.header === "Projets" || card.header === "À-propos"){
-        <!-- BOUTONS projets sobres -->
+      } @else if (card.header === "Project" || card.header === "À-propos"){
         <button
           class="px-4 py-2 bg-gray-900 text-white rounded-xl text-sm font-semibold
                  flex items-center gap-3 shadow-md hover:bg-blue-600 hover:shadow-lg
@@ -81,10 +83,8 @@
                   d="M7.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L11.586 10 7.293 5.707a1 1 0 010-1.414z"
                   clip-rule="evenodd" />
           </svg>
-
         </button>
       } @else {
-        <!-- CHIPS standards sobres -->
         <span class="flex items-center gap-2 px-4 py-1.5 bg-gray-100 text-gray-700
                      rounded-full text-sm font-medium shadow-sm">
           {{ chip.textValue }}

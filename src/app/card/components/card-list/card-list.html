@@ -1,7 +1,13 @@
-<div class="card-stack flex flex-col items-center relative pt-20 pb-20">
+<div class="card-stack flex flex-col items-center relative pt-8 pb-8">
   @for (card of cards; let i = $index; track card.header) {
     <app-single-card
-      class="relative mt-[-40px] first:mt-0"
+      class="relative first:mt-0 w-full max-w-[850px]"
+      [ngClass]="{
+        'mt-[-20px] sm:mt-[-36px]': card.header === 'À-propos',
+        'mt-[-15px] sm:mt-[-30px]': card.header === 'Compétences',
+        'mt-[-18px] sm:mt-[-32px]': card.header === 'Project',
+        'mt-[-12px] sm:mt-[-26px]': card.header === 'Contact'
+      }"
       [card]="card">
     </app-single-card>
   }

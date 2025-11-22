@@ -2,12 +2,15 @@ import { Component } from '@angular/core';
 import { Card } from '../../../core/components/models/Card';
 import { Chip } from '../../../core/components/models/Chip';
 import { SingleCard } from '../single-card/single-card';
+import {NgClass} from '@angular/common';
 @Component({
   selector: 'app-card-list',
+  standalone: true,
   templateUrl: './card-list.html',
   styleUrls: ['./card-list.scss'],
   imports: [
-    SingleCard
+    SingleCard,
+    NgClass
   ]
 })
 export class CardList {
@@ -24,8 +27,8 @@ export class CardList {
       ]
     ),
 
-    new Card('Projets', 'Projets principaux', '', [
-        new Chip('Voir mes projets'),
+    new Card('Project', 'Project principaux', '', [
+        new Chip('Voir mes project'),
       ]
     ),
 
