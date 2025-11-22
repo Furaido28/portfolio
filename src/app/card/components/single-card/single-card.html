@@ -1,1 +1,92 @@
-<p>single-card works!</p>
+<div class="bg-white rounded-3xl
+         shadow-[0_16px_40px_rgba(0,0,0,0.45),0_32px_64px_rgba(0,0,0,0.65)]
+         w-[800px] h-[250px]
+         flex flex-col justify-center px-10 py-6
+         transition-all duration-300
+         hover:-translate-y-2
+         hover:shadow-[0_20px_50px_rgba(0,0,0,0.55),0_40px_80px_rgba(0,0,0,0.70)]
+         cursor-pointer">
+  <div class="text-gray-500 font-semibold text-lg mb-1">
+    {{ card.header }}
+  </div>
+
+  <div class="text-3xl
+         font-bold
+         text-gray-900
+         leading-tight">
+    {{ card.title }}
+  </div>
+
+  <p class="text-gray-700 text-base mt-2 leading-relaxed">
+    {{ card.description }}
+  </p>
+
+  <div class="flex flex-wrap gap-3 mt-4">
+    @for (chip of card.chips; track chip.textValue) {
+      @if(card.header === "Contact") {
+        <!-- Cas EMAIL -->
+        @if (chip.textValue === 'Email') {
+          <a href="mailto:ethan.flipo@icloud.com"
+             target="_blank"
+             class="flex items-center gap-2 px-4 py-1.5 bg-gray-200
+                rounded-full text-sm font-medium text-gray-800
+                shadow-sm cursor-pointer hover:bg-gray-300 transition">
+            <img src="/assets/icons/email.svg" class="w-4 h-4" />
+            {{ chip.textValue }}
+          </a>
+        }
+
+        <!-- Cas LINKEDIN -->
+        @if (chip.textValue === 'LinkedIn') {
+          <a href="https://www.linkedin.com/in/ethan-flipo"
+             target="_blank"
+             class="flex items-center gap-2 px-4 py-1.5 bg-gray-200
+                rounded-full text-sm font-medium text-gray-800
+                shadow-sm cursor-pointer hover:bg-gray-300 transition">
+            <img src="/assets/icons/linkedin.svg" class="w-4 h-4" />
+            {{ chip.textValue }}
+          </a>
+        }
+
+        <!-- Cas GITHUB -->
+        @if (chip.textValue === 'GitHub') {
+          <a href="https://github.com/Furaido28"
+             target="_blank"
+             class="flex items-center gap-2 px-4 py-1.5 bg-gray-200
+                rounded-full text-sm font-medium text-gray-800
+                shadow-sm cursor-pointer hover:bg-gray-300 transition">
+            <img src="/assets/icons/github.svg" class="w-4 h-4" />
+
+            {{ chip.textValue }}
+          </a>
+        }
+      } @else if (card.header === "Projets"){
+        <!-- TES BOUTONS projets -->
+        <button
+          class="px-4 py-2 bg-gray-900 text-white rounded-xl text-sm font-semibold
+             flex items-center gap-3 shadow-md hover:bg-gray-700 hover:shadow-lg
+             transition-all duration-200 group">
+
+          <span>{{ chip.textValue }}</span>
+          <span class="w-px h-4 bg-gray-500"></span>
+
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 20 20"
+               fill="currentColor"
+               class="w-4 h-4 transition-all duration-200 group-hover:translate-x-1">
+            <path fill-rule="evenodd"
+                  d="M7.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L11.586 10 7.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+          </svg>
+
+        </button>
+      } @else {
+        <span class="flex items-center gap-2 px-4 py-1.5 bg-gray-200
+                rounded-full text-sm font-medium text-gray-800
+                shadow-sm">
+        {{ chip.textValue }}
+      </span>
+      }
+    }
+  </div>
+</div>

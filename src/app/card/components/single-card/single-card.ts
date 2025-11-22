@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Card } from '../../models/Card';
 
 @Component({
   selector: 'app-single-card',
-  imports: [],
   templateUrl: './single-card.html',
-  styleUrl: './single-card.css',
+  styleUrls: ['./single-card.scss']
 })
 export class SingleCard {
-
+  @Input() card!: Card;
 }

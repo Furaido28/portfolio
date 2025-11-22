@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tête (plus grosse) -->
+  <circle cx="12" cy="6" r="4.5" fill="black"></circle>
+
+  <!-- Petit espace entre tête et corps -->
+  <path d="M4 19
+           C4 13.2 7.5 11 12 11
+           C16.5 11 20 13.2 20 19
+           Z" fill="black"></path>
+</svg>

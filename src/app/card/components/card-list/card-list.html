@@ -1,0 +1,8 @@
+<div class="card-stack flex flex-col items-center relative pt-20 pb-20">
+  @for (card of cards; let i = $index; track card.header) {
+    <app-single-card
+      class="relative mt-[-40px] first:mt-0"
+      [card]="card">
+    </app-single-card>
+  }
+</div>
