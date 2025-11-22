@@ -2,13 +2,56 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "5666890c-a8ae-47a3-b6c4-6cd8993b791f",
+    "schematicDefaults": {
+      "@schematics/angular:component": {
+        "skipTests": true
+      },
+      "@schematics/angular:class": {
+        "skipTests": true
+      },
+      "@schematics/angular:directive": {
+        "skipTests": true
+      },
+      "@schematics/angular:guard": {
+        "skipTests": true
+      },
+      "@schematics/angular:interceptor": {
+        "skipTests": true
+      },
+      "@schematics/angular:pipe": {
+        "skipTests": true
+      },
+      "@schematics/angular:resolver": {
+        "skipTests": true
+      },
+      "@schematics/angular:service": {
+        "skipTests": true
+      }
+    }
   },
   "newProjectRoot": "projects",
   "projects": {
     "portfolio": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
