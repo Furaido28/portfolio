@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Card } from '../../models/Card';
-import { Chip } from '../../models/Chip';
+import { Card } from '../../../core/components/models/Card';
+import { Chip } from '../../../core/components/models/Chip';
 import { SingleCard } from '../single-card/single-card';
 @Component({
   selector: 'app-card-list',
@@ -12,9 +12,9 @@ import { SingleCard } from '../single-card/single-card';
 })
 export class CardList {
   cards: Card[] = [
-    new Card('À-propos', 'Flipo Ethan', 'Lorem ipsum dolor sit amet. ' +
-      'Et incidunt repellat sit nihil temporibus non repudiandae dicta qui adipisci ipsum. µ' +
-      'Eum quas sunt qui eveniet facere aut quasi illo quo sequi tempora eum asperiores molestias. '
+    new Card('À-propos', 'Flipo Ethan', `Passionné par le développement d'applications, je donne vie à mes ambitions à travers le code.`, [
+        new Chip('En savoir plus sur moi')
+      ]
     ),
 
     new Card('Compétences', 'Compétences Techniques', '', [

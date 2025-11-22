@@ -1,34 +1,49 @@
 <header class="flex flex-col items-center pt-5">
-  <div class="bg-white rounded-3xl
-              shadow-md border border-gray-200
-              w-[1250px] h-auto
-              flex items-center justify-between
-              px-10 py-6">
+  <div class="bg-white rounded-3xl shadow-sm border border-gray-200
+              w-[90%] h-auto px-6 py-4
+              flex items-center justify-between">
 
-    <!-- Bloc gauche : image + nom + sous-titre -->
-    <div class="flex items-center gap-5">
+    <!-- Bloc gauche -->
+    <div class="flex items-center gap-4">
       <img src="/assets/images/photo.png"
            alt="Photo de profil"
-           class="w-16 h-16 rounded-full object-cover border border-gray-300">
+           class="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover border border-gray-300">
 
-      <!-- Texte regroupé pour un alignement propre -->
       <div class="flex flex-col">
-        <h1 class="text-3xl font-semibold text-gray-800 leading-none">
-          Ethan Flipo
+        <h1 class="text-2xl md:text-3xl font-semibold text-gray-800 leading-none">
+          Flipo Ethan
         </h1>
-        <p class="text-gray-600 text-lg leading-tight">
+        <p class="text-blue-600 text-base md:text-lg leading-tight">
           Développeur d'applications
         </p>
       </div>
     </div>
 
-    <!-- Navigation à droite -->
-    <nav class="flex gap-10 text-lg font-medium text-gray-600">
-      <a href="#" class="hover:text-gray-900">About</a>
-      <a href="#" class="hover:text-gray-900">Skills</a>
-      <a href="#" class="hover:text-gray-900">Projects</a>
-      <a href="#" class="hover:text-gray-900">Contact</a>
+    <!-- Menu desktop -->
+    <nav class="hidden md:flex gap-10 text-lg font-medium text-gray-600">
+      <a href="#" class="hover:text-blue-600 transition-colors">À-propos</a>
+      <a href="#" class="hover:text-blue-600 transition-colors">Compétences</a>
+      <a href="#" class="hover:text-blue-600 transition-colors">Projets</a>
+      <a href="#" class="hover:text-blue-600 transition-colors">Contact</a>
     </nav>
 
+    <!-- Bouton menu mobile -->
+    <button (click)="toggleMenu()"
+            class="md:hidden text-gray-700 text-3xl focus:outline-none">
+      ☰
+    </button>
   </div>
+
+  <!-- Menu mobile -->
+  @if(this.isMenuOpen) {
+    <nav
+      class="flex flex-col gap-4 mt-4 bg-white w-[90%]
+      rounded-2xl border border-gray-200 shadow-sm
+      p-5 text-gray-700 text-lg font-medium md:hidden">
+    <a href="#" class="hover:text-blue-600 transition-colors">À-propos</a>
+    <a href="#" class="hover:text-blue-600 transition-colors">Compétences</a>
+    <a href="#" class="hover:text-blue-600 transition-colors">Projets</a>
+    <a href="#" class="hover:text-blue-600 transition-colors">Contact</a>
+    </nav>
+  }
 </header>
