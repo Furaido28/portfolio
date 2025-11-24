@@ -6,7 +6,6 @@ export class Card {
     private _title: string,
     private _description?: string,
     private _chips?: Chip[],
-    private _imagesUrl?: string[],
     private _contentType?: 'standard' | 'about' | 'skills' | 'project' | 'contact',
     private _additionalData?: any
   ) {}
@@ -15,17 +14,7 @@ export class Card {
     return new Card('', '');
   }
 
-  // -- Methods for images
-  addImageUrl(value: string): void {
-    if (!this._imagesUrl) this._imagesUrl = [];
-    this._imagesUrl.push(value);
-  }
-
-  clearImages(): void {
-    this._imagesUrl = [];
-  }
-
-  // -- Methods for chips
+  // -- Methodes pour les puces
   addChip(value: Chip): void {
     if (!this._chips) this._chips = [];
     this._chips.push(value);
@@ -47,11 +36,6 @@ export class Card {
   get description(): string {
     if(this._description) return this._description;
     return '';
-  }
-
-  get imagesUrl(): string[] {
-    if(this._imagesUrl) return [...this._imagesUrl];
-    return [];
   }
 
   get chips(): Chip[] {

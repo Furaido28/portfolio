@@ -6,25 +6,33 @@
          sm:py-10 sm:px-12
          transition-all duration-300
          hover:-translate-y-1
-         hover:shadow-[0_12px_40px_rgba(0,0,0,0.9)]
-         cursor-pointer"
-     (click)="openCard(card)">
-
-  <div class="text-3xl font-bold text-gray-900 leading-tight mb-6">
+         hover:shadow-[0_12px_40px_rgba(0,0,0,0.9)]">
+  <div class="text-3xl font-bold text-gray-900 leading-tight mb-8">
     {{ card.title }}
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     @for (interest of card.additionalData?.interests; track interest.id) {
-      <div class="flex items-start">
-        <div class="bg-{{interest.color}}-100 p-3 rounded-lg mr-4 shadow-sm">
-          <img [src]="interest.icon" [alt]="interest.title" class="w-6 h-6">
+      <div class="flex bg-gray-50 items-start p-4 rounded-xl transition-all duration-300
+                  hover:bg-gray-100 hover:scale-105">
+
+        <!-- Icône avec taille fixe et alt -->
+        <div class="mr-4 flex-shrink-0">
+          <img
+            [src]="interest.icon"
+            alt=""
+            class="w-8 h-8 object-contain filter-blue"
+          />
         </div>
-        <div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-1">
+
+        <!-- Contenu -->
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">
             {{ interest.title }}
           </h3>
-          <p class="text-gray-600">{{ interest.description }}</p>
+          <p class="text-gray-600 text-lg leading-relaxed text-justify">
+            {{ interest.description }}
+          </p>
         </div>
       </div>
     }

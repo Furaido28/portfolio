@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {Card} from '../models/Card';
-import {Chip} from '../models/Chip';
+import {Card} from '../../core/models/Card';
+import {Chip} from '../../core/models/Chip';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class CardsServices {
       ]
     ),
 
-    new Card('project', 'Project principaux', '', [
+    new Card('projects', 'Project principaux', '', [
         new Chip('Voir mes project'),
       ]
     ),

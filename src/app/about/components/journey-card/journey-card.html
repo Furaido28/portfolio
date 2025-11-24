@@ -6,27 +6,29 @@
          sm:py-10 sm:px-12
          transition-all duration-300
          hover:-translate-y-1
-         hover:shadow-[0_12px_40px_rgba(0,0,0,0.9)]
-         cursor-pointer"
-     (click)="openCard(card)">
-
+         hover:shadow-[0_12px_40px_rgba(0,0,0,0.9)]">
   <div class="text-3xl font-bold text-gray-900 leading-tight mb-6">
     {{ card.title }}
   </div>
 
-  <div class="space-y-6">
+  <div class="space-y-8">
     @for (step of card.additionalData?.journeySteps; track step.id; let i = $index) {
       <div class="flex items-start">
+        <!-- Numéro d'étape -->
         <div class="bg-blue-500 text-white rounded-full w-10 h-10
                     flex items-center justify-center mr-4 flex-shrink-0
-                    shadow-md">
-          {{ i + 1 }}
+                    shadow-md font-semibold">
+          ✧
         </div>
-        <div>
+
+        <!-- Contenu de l'étape -->
+        <div class="flex-1">
           <h3 class="text-xl font-semibold text-gray-800 mb-1">
             {{ step.title }}
           </h3>
-          <p class="text-gray-600">{{ step.description }}</p>
+          <p class="text-gray-600 text-lg font-medium ">{{ step.description }}</p>
+          <p class="text-blue-500 text-lg font-semibold">{{ step.period }}</p>
+          <p class="text-gray-500 text-lg ">{{ step.details }}</p>
         </div>
       </div>
     }

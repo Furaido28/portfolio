@@ -3,7 +3,7 @@ import { Card } from '../../../core/models/Card';
 import { Chip } from '../../../core/models/Chip';
 import { SingleCard } from '../single-card/single-card';
 import {NgClass} from '@angular/common';
-import {CardsServices} from '../../../core/services/cards-services';
+import {CardsServices} from '../../services/cards-services';
 @Component({
   selector: 'app-card-list',
   standalone: true,

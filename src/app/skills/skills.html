@@ -1,1 +1,76 @@
-<p>competences works!</p>
+<div class="min-h-screen py-8 px-4">
+  <div class="max-w-4xl mx-auto">
+    <!-- Stack de cartes -->
+    <div class="card-stack flex flex-col items-center relative pt-8 pb-8">
+
+      <!-- Carte Backend -->
+      <app-backend-card
+        class="relative first:mt-0 w-full max-w-[1250px] animate-fade-in-up"
+        [style.animation-delay]="'0s'"
+        [ngClass]="{
+          'mt-[-20px] sm:mt-[-36px]': backendCard.header === 'backend'
+        }"
+        [card]="backendCard">
+      </app-backend-card>
+
+      <!-- Carte Frontend -->
+      <app-frontend-card
+        class="relative w-full max-w-[950px] animate-fade-in-up"
+        [style.animation-delay]="'0.2s'"
+        [ngClass]="{
+          'mt-[-18px] sm:mt-[-32px]': frontendCard.header === 'frontend'
+        }"
+        [card]="frontendCard">
+      </app-frontend-card>
+
+      <!-- Carte Fullstack -->
+      <app-fullstack-card
+        class="relative w-full max-w-[950px] animate-fade-in-up"
+        [style.animation-delay]="'0.4s'"
+        [ngClass]="{
+          'mt-[-15px] sm:mt-[-30px]': fullstackCard.header === 'fullstack'
+        }"
+        [card]="fullstackCard">
+      </app-fullstack-card>
+    </div>
+
+    <div class="flex justify-center gap-4 animate-fade-in-up" [style.animation-delay]="'0.6s'">
+      <button class="px-5 py-3 bg-blue-600 text-white rounded-xl text-base font-semibold
+          flex items-center gap-3 shadow-md hover:bg-blue-900 hover:shadow-lg
+          transition-all duration-200 group"
+              (click)="goToAbout()">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 20 20"
+             fill="currentColor"
+             class="w-5 h-5 transition-all duration-200 group-hover:-translate-x-1">
+          <path fill-rule="evenodd"
+                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                clip-rule="evenodd" />
+        </svg>
+
+        <span class="w-px h-5 bg-gray-500"></span>
+
+        <span>Section précédente</span>
+      </button>
+
+      <button class="px-5 py-3 bg-blue-600 text-white rounded-xl text-base font-semibold
+        flex items-center gap-3 shadow-md hover:bg-blue-900 hover:shadow-lg
+        transition-all duration-200 group"
+              (click)="goToProjects()">
+
+        <span>Prochaine section</span>
+        <span class="w-px h-4 bg-gray-500"></span>
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 20 20"
+             fill="currentColor"
+             class="w-4 h-4 transition-all duration-200 group-hover:translate-x-1">
+          <path fill-rule="evenodd"
+                d="M7.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L11.586 10 7.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

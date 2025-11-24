@@ -12,5 +12,6 @@ export const routes: Routes = [
   { path: 'skills', component: Skills },
   { path: 'projects', component: Project },
   { path: 'contact', component: Contact },
-  { path: '**', component: PageNotFound }
+  { path: '404', component: PageNotFound },
+  { path: '**', redirectTo: '/404' }
 ];

@@ -11,7 +11,7 @@
               text-center">
 
     <!-- HEADER -->
-    <div class="text-blue-600 font-semibold text-2xl mb-2">
+    <div class="text-red-600 font-semibold text-2xl mb-2">
       Erreur 404
     </div>
 
@@ -28,7 +28,7 @@
 
     <!-- ILLUSTRATION OPTIONAL -->
     <div class="mt-4">
-      <img src="/src/assets/images/404.svg"
+      <img src="assets/images/404.svg"
            class="w-48 h-48 mx-auto opacity-80"
            alt="404 Illustration">
     </div>
@@ -36,9 +36,9 @@
     <!-- ACTIONS -->
     <div class="flex flex-wrap gap-4 justify-center mt-8">
       <!-- Retour accueil -->
-      <a href="/public"
-         class="px-6 py-2.5 bg-gray-900 text-white rounded-xl text-sm font-semibold
-                flex items-center gap-3 shadow-md hover:bg-blue-600 hover:shadow-lg
+      <a href="/"
+         class="px-6 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-semibold
+                flex items-center gap-3 shadow-md hover:bg-blue-900 hover:shadow-lg
                 transition-all duration-200 group">
         <span>Retour à l’accueil</span>
 
@@ -53,12 +53,12 @@
       </a>
 
       <!-- Contact -->
-      <a href="mailto:ethan.flipo@icloud.com"
-         class="flex items-center gap-2 px-5 py-2 bg-gray-100 text-gray-700
+      <a class="flex items-center gap-2 px-5 py-2 bg-gray-100 text-gray-700
                 rounded-full text-sm font-medium shadow-sm hover:bg-gray-200
-                transition-all duration-200">
-        <img src="/src/assets/icons/email.svg" class="w-4 h-4" />
-        Contacter le support
+                transition-all duration-200"
+         [routerLink]="['/contact']">
+        <img src="assets/icons/email.svg" class="w-4 h-4" />
+        Contacter l'administrateur
       </a>
     </div>
 

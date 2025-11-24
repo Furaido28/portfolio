@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Card} from '../../../core/models/Card';
+import {AboutCardsService} from '../../services/aboutCardsServices';
 
 @Component({
   selector: 'app-journey-card',
@@ -8,8 +9,4 @@ import {Card} from '../../../core/models/Card';
 })
 export class JourneyCard {
   @Input() card!: Card;
-
-  openCard(card: Card): void {
-    console.log('Opening journey card:', card);
-  }
 }

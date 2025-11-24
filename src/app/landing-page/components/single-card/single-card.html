@@ -10,7 +10,7 @@
          cursor-pointer"
      [ngClass]="{
          'min-h-[215px]': card.header === 'about',
-         'min-h-[180px]': card.header === 'skills' || card.header === 'project',
+         'min-h-[180px]': card.header === 'skills' || card.header === 'projects',
          'min-h-[150px]': card.header === 'contact'
      }"
      (click)="openCard(card)"
@@ -30,10 +30,10 @@
         @if (chip.textValue === 'Email') {
           <a href="mailto:ethan.flipo@icloud.com"
              target="_blank"
-             class="flex items-center gap-2 px-4 py-1.5 bg-gray-100 text-gray-700
-                    rounded-full text-sm font-medium
-                    shadow-sm cursor-pointer hover:bg-gray-200 transition-all duration-200">
-            <img src="/src/assets/icons/email.svg" class="w-4 h-4" />
+             class="flex items-center gap-2 px-4 py-1.5 bg-gray-300 text-gray-700
+                    rounded-full text-sm font-semibold
+                    shadow-sm cursor-pointer hover:bg-gray-400 transition-all duration-200">
+            <img src="assets/icons/email.svg" class="w-4 h-4" />
             {{ chip.textValue }}
           </a>
         }
@@ -42,10 +42,10 @@
         @if (chip.textValue === 'LinkedIn') {
           <a href="https://www.linkedin.com/in/ethan-flipo"
              target="_blank"
-             class="flex items-center gap-2 px-4 py-1.5 bg-gray-100 text-gray-700
-                    rounded-full text-sm font-medium
-                    shadow-sm cursor-pointer hover:bg-gray-200 transition-all duration-200">
-            <img src="/src/assets/icons/linkedin.svg" class="w-4 h-4" />
+             class="flex items-center gap-2 px-4 py-1.5 bg-gray-300 text-gray-700
+                    rounded-full text-sm font-semibold
+                    shadow-sm cursor-pointer hover:bg-gray-400 transition-all duration-200">
+            <img src="assets/icons/linkedin.svg" class="w-4 h-4" />
             {{ chip.textValue }}
           </a>
         }
@@ -54,14 +54,14 @@
         @if (chip.textValue === 'GitHub') {
           <a href="https://github.com/Furaido28"
              target="_blank"
-             class="flex items-center gap-2 px-4 py-1.5 bg-gray-100 text-gray-700
-                    rounded-full text-sm font-medium
-                    shadow-sm cursor-pointer hover:bg-gray-200 transition-all duration-200">
-            <img src="/src/assets/icons/github.svg" class="w-4 h-4" />
+             class="flex items-center gap-2 px-4 py-1.5 bg-gray-300 text-gray-700
+                    rounded-full text-sm font-semibold
+                    shadow-sm cursor-pointer hover:bg-gray-400 transition-all duration-200">
+            <img src="assets/icons/github.svg" class="w-4 h-4" />
             {{ chip.textValue }}
           </a>
         }
-      } @else if (card.header === "about" || card.header === "project"){
+      } @else if (card.header === "about" || card.header === "projects"){
         <button
           class="px-4 py-2 bg-blue-600 text-white rounded-xl text-sm font-semibold
                  flex items-center gap-3 shadow-md hover:bg-blue-900 hover:shadow-lg
@@ -81,8 +81,8 @@
           </svg>
         </button>
       } @else {
-        <span class="flex items-center gap-2 px-4 py-1.5 bg-gray-100 text-gray-700
-                     rounded-full text-sm font-medium shadow-sm">
+        <span class="flex items-center gap-2 px-4 py-1.5 bg-gray-300 text-gray-700
+                     rounded-full text-sm font-semibold shadow-sm">
           {{ chip.textValue }}
         </span>
       }
