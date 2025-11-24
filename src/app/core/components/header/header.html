@@ -23,10 +23,14 @@
 
     <!-- Menu desktop -->
     <nav class="hidden md:flex gap-10 text-lg font-medium text-gray-600">
-      <a href="#" class="hover:text-blue-600 transition-colors">À-propos</a>
-      <a href="#" class="hover:text-blue-600 transition-colors">Compétences</a>
-      <a href="#" class="hover:text-blue-600 transition-colors">Project</a>
-      <a href="#" class="hover:text-blue-600 transition-colors">Contact</a>
+      <a [routerLink]="['/about']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+         class="hover:text-blue-600 transition-colors">À-propos</a>
+      <a [routerLink]="['/skills']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+         class="hover:text-blue-600 transition-colors">Compétences</a>
+      <a [routerLink]="['/projects']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+         class="hover:text-blue-600 transition-colors">Projets</a>
+      <a [routerLink]="['/contact']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+         class="hover:text-blue-600 transition-colors">Contact</a>
     </nav>
 
     <!-- Bouton menu mobile -->

@@ -70,7 +70,8 @@
         <button
           class="px-4 py-2 bg-gray-900 text-white rounded-xl text-sm font-semibold
                  flex items-center gap-3 shadow-md hover:bg-blue-600 hover:shadow-lg
-                 transition-all duration-200 group">
+                 transition-all duration-200 group"
+          (click)="openCard(card)">
 
           <span>{{ chip.textValue }}</span>
           <span class="w-px h-4 bg-gray-500"></span>
