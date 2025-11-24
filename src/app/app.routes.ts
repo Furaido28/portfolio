@@ -1,15 +1,13 @@
 import { Routes } from '@angular/router';
-import {App} from './app';
-import {CardList} from './card/components/card-list/card-list';
-import {urlGuard} from './core/url.guard';
-import {About} from './pages/about/about';
-import {Skills} from './pages/skills/skills';
-import {Project} from './pages/project/project';
-import {Contact} from './pages/contact/contact';
-import {PageNotFound} from './pages/page-not-found/page-not-found';
+import {About} from './about/about';
+import {Skills} from './skills/skills';
+import {Project} from './project/project';
+import {Contact} from './contact/contact';
+import {PageNotFound} from './page-not-found/page-not-found';
+import {LandingPage} from './landing-page/landing-page';
 
 export const routes: Routes = [
-  { path: '', component: CardList},
+  { path: '', component: LandingPage },
   { path: 'about', component: About },
   { path: 'skills', component: Skills },
   { path: 'projects', component: Project },

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Card } from '../../../core/components/models/Card';
+import { Card } from '../../../core/models/Card';
 import {NgClass} from '@angular/common';
 import {Router} from '@angular/router';
 
@@ -19,16 +19,7 @@ export class SingleCard {
   }
 
   protected openCard(card: Card) {
-    if(card.header.toLowerCase() === 'à-propos')
-      this.router.navigateByUrl(`about`);
-
-    if(card.header.toLowerCase() === 'compétences')
-      this.router.navigateByUrl(`skills`);
-
-    if(card.header.toLowerCase() === 'project')
-      this.router.navigateByUrl(`projects`);
-
-    if(card.header.toLowerCase() === 'contact')
-      this.router.navigateByUrl(`contact`);
+    if(card.header !== "contact")
+      this.router.navigateByUrl(card.header);
   }
 }

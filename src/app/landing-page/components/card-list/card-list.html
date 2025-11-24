@@ -1,0 +1,15 @@
+<div class="card-stack flex flex-col items-center relative pt-8 pb-8">
+  @for (card of cards; let i = $index; track card.header) {
+    <app-single-card
+      class="relative first:mt-0 w-full max-w-[950px] animate-fade-in-up"
+      [style.animation-delay]="(i * 0.2) + 's'"
+      [ngClass]="{
+        'mt-[-20px] sm:mt-[-36px]': card.header === 'about',
+        'mt-[-15px] sm:mt-[-30px]': card.header === 'skills',
+        'mt-[-18px] sm:mt-[-32px]': card.header === 'project',
+        'mt-[-12px] sm:mt-[-26px]': card.header === 'contact'
+      }"
+      [card]="card">
+    </app-single-card>
+  }
+</div>

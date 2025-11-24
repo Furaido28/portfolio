@@ -22,7 +22,7 @@
     </div>
 
     <!-- Menu desktop -->
-    <nav class="hidden md:flex gap-10 text-lg font-medium text-gray-600">
+    <nav class="hidden lg:flex gap-10 text-lg font-medium text-gray-600">
       <a [routerLink]="['/about']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
          class="hover:text-blue-600 transition-colors">À-propos</a>
       <a [routerLink]="['/skills']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
@@ -35,7 +35,7 @@
 
     <!-- Bouton menu mobile -->
     <button (click)="toggleMenu()"
-            class="md:hidden text-gray-700 text-3xl focus:outline-none">
+            class="lg:hidden text-gray-700 text-3xl focus:outline-none">
       ☰
     </button>
   </div>
@@ -43,13 +43,13 @@
   <!-- Menu mobile -->
   @if(this.isMenuOpen) {
     <nav
-      class="flex flex-col gap-4 mt-4 bg-white w-[90%]
+      class="mobile-menu flex flex-col gap-4 mt-4 bg-white w-[90%]
       rounded-2xl border border-gray-200 shadow-sm
       p-5 text-gray-700 text-lg font-medium md:hidden">
-    <a href="#" class="hover:text-blue-600 transition-colors">À-propos</a>
-    <a href="#" class="hover:text-blue-600 transition-colors">Compétences</a>
-    <a href="#" class="hover:text-blue-600 transition-colors">Project</a>
-    <a href="#" class="hover:text-blue-600 transition-colors">Contact</a>
+      <a href="#" class="menu-item hover:text-blue-600 transition-colors">À-propos</a>
+      <a href="#" class="menu-item hover:text-blue-600 transition-colors">Compétences</a>
+      <a href="#" class="menu-item hover:text-blue-600 transition-colors">Project</a>
+      <a href="#" class="menu-item hover:text-blue-600 transition-colors">Contact</a>
     </nav>
   }
 </header>
