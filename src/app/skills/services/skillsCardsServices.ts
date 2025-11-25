@@ -76,14 +76,14 @@ export class SkillsCardsService {
   );
 
   getBackendCard(): Card {
-    return this._backendCard;
+    return this._backendCard.clone();
   }
 
   getFrontendCard(): Card {
-    return this._frontendCard;
+    return this._frontendCard.clone();
   }
 
   getFullstackCard(): Card {
-    return this._fullstackCard;
+    return this._fullstackCard.clone()
   }
 }

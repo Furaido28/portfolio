@@ -92,14 +92,14 @@ export class AboutCardsService {
 
 
   getAboutCard(): Card {
-    return this._aboutCard;
+    return this._aboutCard.clone();
   }
 
   getJourneyCard(): Card {
-    return this._journeyCard;
+    return this._journeyCard.clone();
   }
 
   getInterestsCard(): Card {
-    return this._interestsCard;
+    return this._interestsCard.clone();
   }
 }

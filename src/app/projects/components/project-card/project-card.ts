@@ -1,7 +1,8 @@
 // components/projects-card/projects-card.component.ts
-import { Component, Input } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Card } from '../../../core/models/Card';
 import { Router } from '@angular/router';
+import {ProjectCardsServices} from '../../services/projectCardsServices';
 
 @Component({
   selector: 'app-projects-card',

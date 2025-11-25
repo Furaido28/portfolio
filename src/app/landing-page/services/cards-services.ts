@@ -33,16 +33,6 @@ export class CardsServices {
   ];
 
   getAllCards(): Card[] {
-    return [...this._cards];
-  }
-
-  getCardByHeader(value: string): Card {
-    const returnedCard = this._cards.find(card => card.header === value);
-
-    if (returnedCard) {
-      return returnedCard;
-    }
-
-    return Card.empty();
+    return this._cards.map(card => card.clone());
   }
 }

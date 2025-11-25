@@ -14,16 +14,6 @@ export class Card {
     return new Card('', '');
   }
 
-  // -- Methodes pour les puces
-  addChip(value: Chip): void {
-    if (!this._chips) this._chips = [];
-    this._chips.push(value);
-  }
-
-  clearChips(): void {
-    this._chips = [];
-  }
-
   // -- Getters
   get header(): string {
     return this._header;
@@ -52,8 +42,25 @@ export class Card {
     return this._additionalData;
   }
 
-  // -- Setters
-  set additionalData(data: any) {
-    this._additionalData = data;
+  clone(): Card {
+    // 1. Clonage de chaque objet Chip
+    const clonedChips = this.chips.map(chip => chip.clone());
+
+    // 2. Clonage de _additionalData (soit en utilisant un clone profond
+    //    avec JSON.parse(JSON.stringify(obj)) pour un POJO,
+    //    soit une méthode de clone dédiée si l'objet est complexe)
+    // Ici, nous utilisons l'approche shallow/safe pour _additionalData
+    const clonedAdditionalData = this._additionalData
+      ? JSON.parse(JSON.stringify(this._additionalData))
+      : undefined;
+
+    return new Card(
+      this.header,
+      this.title,
+      this.description,
+      clonedChips,
+      this._contentType,
+      clonedAdditionalData
+    );
   }
 }

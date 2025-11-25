@@ -6,7 +6,7 @@ import {SectionNavigation} from '../core/components/section-navigation/section-n
   selector: 'app-contact',
   standalone: true,
   imports: [
-    SectionNavigation
+    SectionNavigation,
   ],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',

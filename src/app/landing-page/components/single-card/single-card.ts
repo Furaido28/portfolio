@@ -19,7 +19,6 @@ export class SingleCard {
   }
 
   protected openCard(card: Card) {
-    if(card.header !== "contact")
-      this.router.navigateByUrl(card.header);
+    this.router.navigateByUrl(card.header);
   }
 }

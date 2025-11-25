@@ -21,4 +21,8 @@ export class Chip {
   get url() {
     return this._url;
   }
+
+  clone(): Chip {
+    return new Chip(this.textValue, this.type, this._icon, this._url);
+  }
 }
