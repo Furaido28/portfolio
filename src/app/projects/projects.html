@@ -1,7 +1,4 @@
-<div class="min-h-screen py-8 px-4">
-  <div class="max-w-4xl mx-auto">
-
-    <div class="card-stack flex flex-col items-center relative pt-8 pb-8">
+<div class="card-stack flex flex-col items-center relative pt-8 pb-8">
       @for (project of projects; track project.header; let i = $index) {
         <app-projects-card
           class="relative first:mt-0 w-full max-w-[950px] animate-fade-in-up"
@@ -12,10 +9,8 @@
           [card]="project">
         </app-projects-card>
       }
-    </div>
-
-    <app-section-navigation
-      (next)="goToNextSection()"
-      (previous)="goToPreviousSection()"/>
-  </div>
 </div>
+
+<app-section-navigation
+  (next)="goToNextSection()"
+  (previous)="goToPreviousSection()"/>

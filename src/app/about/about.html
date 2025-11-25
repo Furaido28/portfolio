@@ -1,42 +1,38 @@
-<div class="min-h-screen py-8 px-4">
-  <div class="max-w-4xl mx-auto">
-    <!-- Stack de cartes -->
-    <div class="card-stack flex flex-col items-center relative pt-8 pb-8">
+<!-- Stack de cartes -->
+<div class="card-stack flex flex-col items-center relative pt-8 pb-8">
 
-      <!-- Carte À propos -->
-      <app-about-card
-        class="relative first:mt-0 w-full max-w-[1250px] animate-fade-in-up"
-        [style.animation-delay]="'0s'"
-        [ngClass]="{
-          'mt-[-20px] sm:mt-[-36px]': aboutCard.header === 'about'
-        }"
-        [card]="aboutCard">
-      </app-about-card>
+  <!-- Carte À propos -->
+  <app-about-card
+    class="relative first:mt-0 w-full max-w-[1250px] animate-fade-in-up"
+    [style.animation-delay]="'0s'"
+    [ngClass]="{
+      'mt-[-20px] sm:mt-[-36px]': aboutCard.header === 'about'
+    }"
+    [card]="aboutCard">
+  </app-about-card>
 
-      <!-- Carte Parcours -->
-      <app-journey-card
-        class="relative w-full max-w-[950px] animate-fade-in-up"
-        [style.animation-delay]="'0.2s'"
-        [ngClass]="{
-          'mt-[-18px] sm:mt-[-32px]': journeyCard.header === 'journey'
-        }"
-        [card]="journeyCard">
-      </app-journey-card>
+  <!-- Carte Parcours -->
+  <app-journey-card
+    class="relative w-full max-w-[950px] animate-fade-in-up"
+    [style.animation-delay]="'0.2s'"
+    [ngClass]="{
+      'mt-[-18px] sm:mt-[-32px]': journeyCard.header === 'journey'
+    }"
+    [card]="journeyCard">
+  </app-journey-card>
 
-      <!-- Carte Centres d'intérêt -->
-      <app-interests-card
-        class="relative w-full max-w-[950px] animate-fade-in-up"
-        [style.animation-delay]="'0.4s'"
-        [ngClass]="{
-          'mt-[-15px] sm:mt-[-30px]': interestsCard.header === 'interests'
-        }"
-        [card]="interestsCard">
-      </app-interests-card>
-    </div>
-
-    <app-section-navigation
-      [previousText]="'Retourner à l\'accueil'"
-      (next)="goToNextSection()"
-      (previous)="goToPreviousSection()"/>
-  </div>
+  <!-- Carte Centres d'intérêt -->
+  <app-interests-card
+    class="relative w-full max-w-[950px] animate-fade-in-up"
+    [style.animation-delay]="'0.4s'"
+    [ngClass]="{
+      'mt-[-15px] sm:mt-[-30px]': interestsCard.header === 'interests'
+    }"
+    [card]="interestsCard">
+  </app-interests-card>
 </div>
+
+<app-section-navigation
+  [previousText]="'Retourner à l\'accueil'"
+  (next)="goToNextSection()"
+  (previous)="goToPreviousSection()"/>

@@ -46,10 +46,14 @@
       class="mobile-menu flex flex-col gap-4 mt-4 bg-white w-[90%]
       rounded-2xl border border-gray-200 shadow-sm
       p-5 text-gray-700 text-lg font-medium md:hidden">
-      <a href="#" class="menu-item hover:text-blue-600 transition-colors">À-propos</a>
-      <a href="#" class="menu-item hover:text-blue-600 transition-colors">Compétences</a>
-      <a href="#" class="menu-item hover:text-blue-600 transition-colors">Projects</a>
-      <a href="#" class="menu-item hover:text-blue-600 transition-colors">Contact</a>
+      <a [routerLink]="['/about']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        class="menu-item hover:text-blue-600 transition-colors">À-propos</a>
+      <a [routerLink]="['/skills']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+         class="menu-item hover:text-blue-600 transition-colors">Compétences</a>
+      <a [routerLink]="['/projects']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+         class="menu-item hover:text-blue-600 transition-colors">Projects</a>
+      <a [routerLink]="['/contact']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+         class="menu-item hover:text-blue-600 transition-colors">Contact</a>
     </nav>
   }
 </header>

@@ -11,13 +11,12 @@ import {SectionNavigation} from '../core/components/section-navigation/section-n
   selector: 'app-projects-page',
   standalone: true,
   templateUrl: './projects.html',
-  styles: './projects.scss',
+  styleUrls: ['./projects.scss'],
   imports: [
     NgClass,
     ProjectCard,
     SectionNavigation
   ],
-  styleUrls: ['./projects.scss']
 })
 export class Projects implements OnInit {
   projects: Card[] = [];
