@@ -7,6 +7,7 @@ import {BackendCard} from './components/backend-card/backend-card';
 import {NgClass} from '@angular/common';
 import {FrontendCard} from './components/frontend-card/frontend-card';
 import {FullstackCard} from './components/fullstack-card/fullstack-card';
+import {SectionNavigation} from '../core/components/section-navigation/section-navigation';
 
 @Component({
   selector: 'app-skills',
@@ -14,7 +15,8 @@ import {FullstackCard} from './components/fullstack-card/fullstack-card';
     BackendCard,
     NgClass,
     FrontendCard,
-    FullstackCard
+    FullstackCard,
+    SectionNavigation
   ],
   templateUrl: './skills.html'
 })
@@ -33,11 +35,11 @@ export class Skills implements OnInit {
     this.fullstackCard = this.skillsCardsService.getFullstackCard();
   }
 
-  goToAbout() {
+  goToPreviousSection() {
     this.router.navigateByUrl('about')
   }
 
-  goToProjects() {
+  goToNextSection() {
     this.router.navigateByUrl('projects')
   }
 }

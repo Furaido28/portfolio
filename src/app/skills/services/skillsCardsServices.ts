@@ -6,25 +6,29 @@ import {Chip} from '../../core/models/Chip';
   providedIn: 'root'
 })
 export class SkillsCardsService {
+  // Carte Backend
   private _backendCard: Card = new Card(
     'backend',
     'Développement Backend',
-    'Spécialisé dans la création d\'APIs robustes et scalables, avec une expertise particulière dans les architectures microservices et les bases de données.',
+    "Développement d’APIs et de fonctionnalités backend fiables, avec une bonne compréhension des bases du serveur, de la logique métier et des bases de données.",
     [
-      new Chip('Node.js', 'skill'),
-      new Chip('Python', 'skill'),
-      new Chip('Java', 'skill'),
-      new Chip('C#', 'skill'),
       new Chip('PHP', 'skill'),
-      new Chip('Express.js', 'skill'),
-      new Chip('NestJS', 'skill'),
-      new Chip('Django', 'skill'),
-      new Chip('Spring Boot', 'skill')
+      new Chip('Java', 'skill'),
+      new Chip('Spring Boot', 'skill'),
+      new Chip('.NET', 'skill'),
+      new Chip('C#', 'skill'),
+      new Chip('Python', 'skill'),
+      new Chip('C', 'skill'),
+      new Chip('C++', 'skill'),
+      new Chip('MySQL', 'skill'),
+      new Chip('AJAX', 'skill')
     ],
     'skills',
     {
-      technologies: ['Node.js', 'Python', 'Java', 'C#', 'PHP'],
-      frameworks: ['Express.js', 'NestJS', 'Django', 'Spring Boot', 'Laravel'],
+      technologies: ['PHP', 'Java', 'Python', 'C#', 'C', 'C++'],
+      frameworks: ['Spring Boot', '.NET'],
+      databases: ['MySQL'],
+      tools: ['WampServer'],
       icon: 'backend-icon.svg'
     }
   );
@@ -33,21 +37,19 @@ export class SkillsCardsService {
   private _frontendCard: Card = new Card(
     'frontend',
     'Développement Frontend',
-    'Passionné par la création d\'interfaces utilisateur modernes et réactives, avec un focus sur l\'expérience utilisateur et les performances.',
+    'Gestion complète d’un projet : du développement frontend et backend jusqu’à l’intégration, les tests et le déploiement.',
     [
-      new Chip('HTML5', 'skill'),
-      new Chip('CSS3', 'skill'),
+      new Chip('HTML', 'skill'),
+      new Chip('CSS', 'skill'),
+      new Chip('SCSS', 'skill'),
       new Chip('JavaScript', 'skill'),
       new Chip('TypeScript', 'skill'),
-      new Chip('Angular', 'skill'),
-      new Chip('React', 'skill'),
-      new Chip('Vue.js', 'skill'),
-      new Chip('Tailwind CSS', 'skill')
+      new Chip('Angular', 'skill')
     ],
     'skills',
     {
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript'],
-      frameworks: ['Angular', 'React', 'Vue.js', 'Tailwind CSS', 'SASS'],
+      technologies: ['HTML', 'CSS', 'SCSS', 'JavaScript', 'TypeScript'],
+      frameworks: ['Angular'],
       icon: 'frontend-icon.svg'
     }
   );
@@ -55,21 +57,20 @@ export class SkillsCardsService {
   // Carte Fullstack
   private _fullstackCard: Card = new Card(
     'fullstack',
-    'Expertise Fullstack',
-    'Capacité à prendre en charge l\'ensemble du cycle de développement, de la conception à la mise en production, en assurant la cohérence entre frontend et backend.',
+    'Développement Fullstack',
+    'Capacité à gérer l’ensemble de la chaîne de développement : frontend, backend, intégration et déploiement.',
     [
       new Chip('Architecture API REST', 'skill'),
       new Chip('Intégration continue', 'skill'),
       new Chip('DevOps', 'skill'),
-      new Chip('Tests automatisés', 'skill'),
       new Chip('Docker', 'skill'),
-      new Chip('Git', 'skill'),
-      new Chip('AWS', 'skill')
+      new Chip('Git', 'skill')
     ],
     'skills',
     {
       skills: ['Architecture API REST', 'Intégration continue', 'DevOps', 'Tests automatisés'],
-      tools: ['Docker', 'Git', 'AWS', 'MongoDB', 'PostgreSQL', 'Redis'],
+      tools: ['Docker', 'Git'],
+      other: ['VBA'],
       icon: 'fullstack-icon.svg'
     }
   );

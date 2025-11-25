@@ -3,6 +3,7 @@ import {Card} from '../../../core/models/Card';
 
 @Component({
   selector: 'app-about-card',
+  standalone: true,
   templateUrl: './about-card.html',
   styleUrls: ['./about-card.scss']
 })

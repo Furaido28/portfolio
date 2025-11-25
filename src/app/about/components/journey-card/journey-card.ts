@@ -4,6 +4,7 @@ import {AboutCardsService} from '../../services/aboutCardsServices';
 
 @Component({
   selector: 'app-journey-card',
+  standalone: true,
   templateUrl: './journey-card.html',
   styleUrls: ['./journey-card.scss']
 })

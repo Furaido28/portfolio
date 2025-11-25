@@ -19,8 +19,8 @@ export class CardsServices {
       ]
     ),
 
-    new Card('projects', 'Project principaux', '', [
-        new Chip('Voir mes project'),
+    new Card('projects', 'Projects principaux', '', [
+        new Chip('Voir mes projects'),
       ]
     ),
 

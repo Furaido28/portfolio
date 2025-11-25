@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Card} from '../core/models/Card';
-import {Chip} from '../core/models/Chip';
+import {SectionNavigation} from '../core/components/section-navigation/section-navigation'
 import {NgClass} from '@angular/common';
 import {InterestsCard} from './components/interests-card/interests-card';
 import {JourneyCard} from './components/journey-card/journey-card';
@@ -10,12 +10,14 @@ import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-about-page',
+  standalone: true,
   templateUrl: './about.html',
   imports: [
     NgClass,
     InterestsCard,
     JourneyCard,
-    AboutCard
+    AboutCard,
+    SectionNavigation
   ],
   styleUrls: ['./about.scss']
 })
@@ -34,11 +36,11 @@ export class About implements OnInit {
     this.interestsCard = this.aboutCardsService.getInterestsCard();
   }
 
-  protected goToHome() {
+  protected goToPreviousSection(): void {
     this.router.navigateByUrl('');
   }
 
-  protected goToSkills() {
+  protected goToNextSection(): void {
     this.router.navigateByUrl('skills');
   }
 }
