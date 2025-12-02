@@ -1,5 +1,5 @@
 export interface ProjectData {
   projectImages: string[];
-  longDescription: string;
+  description: string;
   isDone: boolean;
 }
