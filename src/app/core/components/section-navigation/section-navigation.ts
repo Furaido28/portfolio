@@ -5,8 +5,7 @@ import {Router} from '@angular/router';
   selector: 'app-section-navigation',
   standalone: true,
   imports: [],
-  templateUrl: './section-navigation.html',
-  styleUrl: './section-navigation.scss',
+  templateUrl: './section-navigation.html'
 })
 export class SectionNavigation {
   @Input() previousText: string = 'Section précédente';

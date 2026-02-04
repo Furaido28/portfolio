@@ -11,8 +11,7 @@ import { ProjectDetailsCard } from '../project-details-card/project-details-card
   templateUrl: './project-details-page.html',
   imports: [
     ProjectDetailsCard
-  ],
-  styleUrls: ['./project-details-page.scss']
+  ]
 })
 export class ProjectDetailsPage implements OnInit {
   @Input() card: Card = Card.empty();

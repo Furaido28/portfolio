@@ -1,14 +1,12 @@
-<div class="card-stack flex flex-col items-center relative pt-8 pb-8">
-      @for (project of projects; track project.header; let i = $index) {
-        <app-projects-card
-          class="relative first:mt-0 w-full max-w-[950px] animate-fade-in-up"
-          [style.animation-delay]="i * 0.2 + 's'"
-          [ngClass]="{
-            'mt-[-20px] sm:mt-[-36px]': i > 0
-          }"
-          [card]="project">
-        </app-projects-card>
-      }
+<div class="flex flex-col items-center py-12  space-y-[-40px] sm:space-y-[-60px]">
+  @for (project of projects; track project.header; let i = $index) {
+    <app-projects-card
+      class="w-full max-w-[950px] transition-all duration-300 ease-out
+             hover:z-50 hover:-translate-y-4 hover:mb-8"
+      [style.animation-delay]="i * 0.1 + 's'"
+      [card]="project">
+    </app-projects-card>
+  }
 </div>
 
 <app-section-navigation

@@ -7,7 +7,7 @@ import {Chip} from '../../core/models/Chip';
 })
 export class CardsServices {
   private _cards: Card[] = [
-    new Card('about', 'Flipo Ethan', `Passionné par le développement d'applications, je donne vie à mes ambitions à travers le code.`, [
+    new Card('about', 'Flipo Ethan', `Passionné par les nouvelles technologies. Je crée des applications performantes en alliant curiosité technique et rigueur de développement.`, [
         new Chip('En savoir plus sur moi')
       ]
     ),
@@ -19,12 +19,12 @@ export class CardsServices {
       ]
     ),
 
-    new Card('projects', 'Projects principaux', '', [
+    new Card('projects', 'Projects principaux', "Découvez l'ensemble de mes projets", [
         new Chip('Voir mes projects'),
       ]
     ),
 
-    new Card('contact', 'Informations complémentaires', '', [
+    new Card('contact', 'Informations complémentaires', "Envie d'échanger avec moi ?", [
         new Chip('Email'),
         new Chip('LinkedIn'),
         new Chip('GitHub')

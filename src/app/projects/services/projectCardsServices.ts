@@ -45,67 +45,6 @@ export class ProjectCardsServices {
     ),
 
     new Card(
-      'projet-liste-courses-c',
-      'Gestion de Listes de Courses avec Listes Chaînées',
-      'Application console en langage C pour la gestion et l\'organisation de listes de courses, permettant d\'ajouter, modifier, supprimer et archiver des produits organisés par magasin.',
-      [
-        new Chip('Langage C', 'skill'),
-        new Chip('Listes Chaînées', 'skill'),
-        new Chip('Pointeurs', 'skill'),
-        new Chip('Gestion de Fichiers (I/O)', 'skill')
-      ],
-      'project',
-      {
-        projectMainImage: 'assets/projets/projet-c/main.png',
-        projectImages: ['assets/projets/projet-c/1.png',
-        ],
-
-        description: `Ce projet est une solution console en **langage C** visant à optimiser la préparation et l'utilisation des listes de courses.`,
-        fonctionalites: [
-          `**Gestion CRUD & Recherche :** L'utilisateur peut Ajouter, Modifier, ou Supprimer des produits en précisant leur catégorie, nom, marque, quantité, etc..`,
-          `**Organisation & Filtrage :** La liste est structurée par **magasin spécifique**, et l'affichage peut être filtré par magasin ou montrer l'intégralité des produits.`,
-          `**Archivage et Portabilité :** La liste peut être exportée (Archivée) dans un fichier pour conservation ou partage, et une liste existante peut être rechargée (Importée)`,
-          `**Architecture Modulaire :** Le code est organisé en fichiers d'en-tête (.h) pour les prototypes et structures et en fichiers source (.c) pour l'implémentation.`,
-          `**Bibliothèques Clés :** Utilisation de bibliothèques comme "stdlib.h" (malloc/free), "string.h" (strcpy/strcmp), et pour les fonctions d'affichage console (Sleep, system("cls")").`
-          ],
-        isDone: true
-    } as ProjectData),
-
-    new Card(
-      'projet-reciply',
-      'Reciply : Site de Gestion de Menus et de Recettes',
-      'Application web full-stack pour l\'enregistrement de recettes, la planification de repas hebdomadaires, la gestion collaborative par ménage et la génération de listes de courses automatiques.',
-      [
-        new Chip('HTML', 'skill'),
-        new Chip('Bootstrap', 'skill'),
-        new Chip('JavaScript', 'skill'),
-        new Chip('AJAX', 'skill'),
-        new Chip('PHP', 'skill'),
-        new Chip('MySQL', 'skill')
-      ],
-      'project',
-      {
-        projectMainImage: 'assets/projets/projet-reciply/main.png',
-        projectImages: ['assets/projets/projet-reciply/1.png',
-          'assets/projets/projet-reciply/2.png',
-          'assets/projets/projet-reciply/3.png',
-          'assets/projets/projet-reciply/4.png'
-        ],
-        siteLink: 'https://reciply.ovh/',
-        description: `Ce projet consiste en la création d'une **application web full-stack** complète visant à simplifier l'organisation culinaire et la gestion des repas quotidiens. L'objectif principal est de fournir aux utilisateurs un outil intuitif pour centraliser leurs recettes, **planifier leurs menus à la semaine**, et générer automatiquement leurs listes de courses.`,
-        fonctionalites: [
-          `**Gestion des Ménages :** Création, suppression et gestion d’un groupe d’utilisateurs appelé **Ménage**. Le **Chef de Ménage** peut ajouter/retirer des membres et supprimer le groupe, les autres membres peuvent simplement le quitter.`,
-          `**Authentification et Sécurité :** Système complet d’inscription/connexion sécurisé (email ou pseudonyme). Mots de passe protégés avec **BCRYPT** et gestion de session utilisateur.`,
-          `**Planification des Repas :** Interface hebdomadaire permettant d’organiser les repas avec filtres pour la sélection des recettes.`,
-          `**Recettes :** Consultation, ajout et filtrage des recettes par catégorie et par régime alimentaire. Les utilisateurs peuvent également créer et gérer leurs propres recettes.`,
-          `**Génération Automatique de Liste de Courses :** Un outil dédié génère automatiquement la liste de courses à partir des repas planifiés sur la semaine.`,
-          `**Panneau d’Administration :** Gestion centralisée des utilisateurs et des groupes par les administrateurs.`
-        ],
-        isDone: true
-      } as ProjectData
-    ),
-
-    new Card(
       'projet-mario-kart-25',
       'Mario Kart 25 - Jeu de Plateau et de Culture Générale',
       'Développement d\'un jeu de plateau numérique (inspiré de "Tu te mets combien ?") avec une thématique "Mario Kart 25" en JavaFX, intégrant un système d\'objets bonus/malus et des questions-réponses de difficulté variable.',
@@ -203,7 +142,7 @@ export class ProjectCardsServices {
           `**Product Backlog :** Rédaction d’un backlog complet organisé en User Stories pour Joueur, Objets, Ennemis, Level Design et Narration.`,
           `**Conditions de Victoire :** Récupérer les trois fragments, vaincre le boss final dans la cour et s’échapper de l'école.`
         ],
-        isDone: false
+        isDone: true
       } as ProjectData
     ),
 
@@ -241,7 +180,7 @@ export class ProjectCardsServices {
           `**Architecture Réseau :** Communication basée sur des **sockets C#** (TCP/UDP selon implémentation) pour transmettre les messages entre machines locales.`
         ],
 
-        isDone: false
+        isDone: true
       } as ProjectData
     ),
 
@@ -270,7 +209,7 @@ export class ProjectCardsServices {
           `**Sécurité :** Système d’authentification garantissant la séparation des galeries et la personnalisation de l’expérience utilisateur.`
         ],
 
-        isDone: false
+        isDone: true
       } as ProjectData
     )
   ];

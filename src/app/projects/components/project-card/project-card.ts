@@ -8,14 +8,14 @@ import {ProjectCardsServices} from '../../services/projectCardsServices';
   selector: 'app-projects-card',
   standalone: true,
   templateUrl: './project-card.html',
-  styleUrls: ['./project-card.scss']
 })
 export class ProjectCard {
-  @Input() card!: Card;
+  @Input({ required: true }) card!: Card;
 
   constructor(private router: Router) {}
 
   viewProjectDetails(): void {
-    this.router.navigateByUrl(`/projects/${this.card.header}`);
+    // Utilisation d'un identifiant unique propre
+    this.router.navigate(['/projects', this.card.header]);
   }
 }
