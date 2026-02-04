@@ -128,6 +128,7 @@ export class ProjectCardsServices {
         projectMainImage: 'assets/projets/projet-zombie-high-school/main.png',
         projectImages: [
           'assets/projets/projet-zombie-high-school/1.png',
+          'assets/projets/projet-zombie-high-school/2.png'
         ],
         description: `Ce projet traite la **conception et l’analyse** d’un jeu d’action/survie en **2D Top-Down**, entièrement imaginé dans un univers Pixel-Art horrifique et parodique. Le joueur traverse différentes zones d'une école, affronte des zombies aux comportements variés, gère son inventaire d’armes improvisées et récupère des fragments de clé pour accéder au boss final.`,
         fonctionalites: [
@@ -161,6 +162,10 @@ export class ProjectCardsServices {
         projectMainImage: 'assets/projets/projet-messagerie-local/main.png',
         projectImages: [
           'assets/projets/projet-messagerie-local/1.png',
+          'assets/projets/projet-messagerie-local/2.png',
+          'assets/projets/projet-messagerie-local/3.png',
+          'assets/projets/projet-messagerie-local/4.png',
+          'assets/projets/projet-messagerie-local/5.png'
         ],
 
         description: `
@@ -189,15 +194,18 @@ export class ProjectCardsServices {
       `Mood Gallery – Journal Visuel d'Humeur Mobile`,
       `Application mobile de journalisation émotionnelle développée en **Flutter**, permettant aux utilisateurs de capturer leur humeur quotidiennement à travers des photos et d’observer l’évolution de leur bien-être grâce à une galerie visuelle et des statistiques.`,
       [
-        new Chip('Flutter', 'skill'),
         new Chip('Développement Mobile', 'skill'),
+        new Chip('Flutter', 'skill'),
         new Chip('Express.js', 'skill'),
       ],
       'project',
       {
         projectMainImage: 'assets/projets/projet-mood-gallery/main.png',
         projectImages: [
-          'assets/projets/projet-mood-gallery/1.png'
+          'assets/projets/projet-mood-gallery/1.png',
+          'assets/projets/projet-mood-gallery/2.png',
+          'assets/projets/projet-mood-gallery/3.png',
+          'assets/projets/projet-mood-gallery/4.png'
         ],
         description: `**Mood Gallery** est une application mobile axée sur la journalisation émotionnelle. Conçue avec **Flutter** et inspirée des principes **Material Design**, elle offre une expérience fluide permettant de capturer des humeurs sous forme de photos, de consulter une galerie d’émotions et d’obtenir des statistiques visuelles sur son état émotionnel.`,
         fonctionalites: [
