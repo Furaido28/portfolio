@@ -1,22 +1,23 @@
-<div class="group relative bg-white border border-gray-200 rounded-3xl p-14
+<div class="group relative bg-white border border-gray-200 rounded-3xl p-6 sm:p-14
             shadow-[0_8px_30px_rgba(0,0,0,0.80)]
-
             transition-all duration-300 cursor-pointer overflow-hidden"
      (click)="viewProjectDetails()">
 
-  <div class="flex items-center gap-10 transition-opacity duration-500 group-hover:opacity-70">
-    <div class="w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 overflow-hidden rounded-2xl bg-gray-50 shadow-inner">
+  <div class="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-10 transition-opacity duration-500 group-hover:opacity-70">
+
+    <div class="w-full h-48 sm:w-32 sm:h-32 flex-shrink-0 overflow-hidden rounded-2xl bg-gray-50 shadow-inner">
       <img [src]="card.additionalData?.projectMainImage"
            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
            [alt]="card.title">
     </div>
 
-    <div class="flex-grow flex flex-col justify-center">
+    <div class="flex-grow flex flex-col justify-center w-full">
       <div class="flex justify-between items-center mb-4">
-        <h2 class="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
+        <h2 class="text-xl sm:text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
           {{ card.title }}
         </h2>
-        <span class="flex h-3 w-3 relative ml-4">
+
+        <span class="flex h-3 w-3 relative ml-4 shrink-0">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
                   [class]="card.additionalData?.isDone ? 'bg-green-400' : 'bg-amber-400'"></span>
             <span class="relative inline-flex rounded-full h-3 w-3"
@@ -24,9 +25,9 @@
         </span>
       </div>
 
-      <div class="flex flex-wrap gap-3">
+      <div class="flex flex-wrap gap-2 sm:gap-3 justify-center sm:justify-start">
         @for (chip of card.chips.slice(0, 3); track chip.textValue) {
-          <span class="px-4 py-2 bg-blue-50 text-blue-700 border border-blue-100 rounded-full text-sm font-semibold shadow-sm">
+          <span class="px-3 py-1 sm:px-4 sm:py-2 bg-blue-50 text-blue-700 border border-blue-100 rounded-full text-xs sm:text-sm font-semibold shadow-sm">
             {{ chip.textValue }}
           </span>
         }
@@ -36,13 +37,13 @@
 
   <div class="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent
               opacity-0 group-hover:opacity-100 transition-opacity duration-500
-              flex items-end justify-end p-8 pointer-events-none">
+              flex items-end justify-center sm:justify-end p-6 sm:p-8 pointer-events-none">
 
-    <div class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-lg
+    <div class="bg-blue-600 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full font-bold shadow-lg
                 flex items-center gap-2 transform translate-y-4 opacity-0
                 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-      Voir les détails
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <span class="text-sm sm:text-base">Voir les détails</span>
+      <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
       </svg>
     </div>

@@ -61,7 +61,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputMode": "static",
+            "outputMode": "server",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -74,7 +74,14 @@
             ],
             "styles": [
               "src/styles.scss"
-            ]
+            ],
+            "server": "src/main.server.ts",
+            "security": {
+              "allowedHosts": []
+            },
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {

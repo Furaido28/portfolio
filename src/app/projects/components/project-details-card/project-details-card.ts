@@ -15,7 +15,6 @@ export class ProjectDetailsCard {
   lightboxImage: string | null = null;
 
   formattedText(text:string): string {
-    // Remplacer **gras** par <strong>gras</strong>
     return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
   }
 

@@ -216,10 +216,43 @@ export class ProjectCardsServices {
           `**Backend & Architecture :** Backend mock en **Express.js** gérant l’authentification et l’enregistrement des données, avec documentation du contrat d’API via **OpenAPI (Swagger)**.`,
           `**Sécurité :** Système d’authentification garantissant la séparation des galeries et la personnalisation de l’expérience utilisateur.`
         ],
-
         isDone: true
       } as ProjectData
-    )
+    ),
+    new Card(
+      'projet-the-lost-grimoire',
+      'The Lost Grimoire – Gestionnaire de Notes Horrifique',
+      `Application multi-tiers développée en **4 jours** lors d'un hackathon, combinant prise de notes en Markdown et univers d'Halloween. L'application repose sur une architecture robuste **Spring Boot/React**, entièrement conteneurisée.`,
+      [
+        new Chip('React', 'skill'),
+        new Chip('Spring Boot', 'skill'),
+        new Chip('Docker & Compose', 'skill'),
+        new Chip('JWT / Sécurité', 'skill'),
+        new Chip('MySQL', 'skill'),
+        new Chip('Tests (JUnit/Mockito)', 'skill')
+      ],
+      'project',
+      {
+        projectMainImage: 'assets/projets/the-lost-grimoire/main.png',
+        projectImages: [
+          'assets/projets/the-lost-grimoire/1.png',
+          'assets/projets/the-lost-grimoire/2.png',
+          'assets/projets/the-lost-grimoire/3.png'
+        ],
+        description: `Réalisé dans le cadre d'un **Hackathon** à la **HELHa**, **The Lost Grimoire** est un éditeur de notes "spooky" inspiré d'outils comme Obsidian. Le défi était de livrer une application complète (Frontend, Backend, DB) en **4 jours** tout en respectant une thématique visuelle imposée autour d'Halloween.`,
+        fonctionalites: [
+          `**Édition Markdown en Temps Réel :** Système de prise de notes avec rendu HTML instantané , supportant les modes « lecture » et « écriture », ainsi qu'une panoplie de **raccourcis clavier** optimisant l'ergonomie et la fluidité`,
+          `**Architecture & Backend :** Développement d'une API REST avec **Java Spring Boot**  connectée à une base de données **MySQL**.`,
+          `**Frontend Thématique :** Interface développée avec **React (Vite)** respectant une charte graphique "Halloween" (noir, jaune, violet) sur l'ensemble des pages.`,
+          `**Sécurité & Authentification :** Implémentation d'une connexion sécurisée via **Tokens JWT** (cookies) pour la protection des données utilisateurs.`,
+          `**Gestion de Contenu :** Organisation des notes via une barre latérale, incluant la gestion de dossiers imbriqués, le renommage et la suppression.`,
+          `**Métadonnées Dynamiques :** Calcul automatique en temps réel de la taille (octets), du nombre de mots, de caractères, ainsi que des dates de création et modification.`,
+          `**DevOps & Qualité :** Orchestration des services via **Docker Compose**  et validation du code par une suite complète de **tests unitaires et d'intégrité**.`,
+          `**Modules d'Exportation :** Génération de fichiers **PDF** à partir du contenu HTML interprété et export de l'intégralité des notes sous format **archive ZIP**.`
+        ],
+        isDone: true
+      } as ProjectData
+    ),
   ];
 
   getAllProjects(): Card[] {
